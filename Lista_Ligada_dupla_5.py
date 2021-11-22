@@ -31,17 +31,16 @@ class Linked_List:
         while aux:
             if aux == self.head:
                 list_info += f'<- {aux.data} <-> '
+                print(f'Nó: {aux}\nValor: {aux.data}\nNó anterior: {None}\nPróximo nó: {aux.nxt.data}\n')
             elif aux == self.tail:
                 list_info += f'{aux.data} -> '
+                print(f'Nó: {aux}\nValor: {aux.data}\nNó anterior: {aux.prev.data}\nPróximo nó: {None}\n')
             else:
                 list_info += f'{aux.data} <-> '
+                print(f'Nó: {aux}\nValor: {aux.data}\nNó anterior: {aux.prev.data}\nPróximo nó: {aux.nxt.data}\n')
             aux = aux.nxt
         
-        print(list_info)
-    
-    
-    def set_head(self, _head):
-        self.head = _head
+        print(list_info + '\n')
     
     
     def sorted_insert(self, _data):
